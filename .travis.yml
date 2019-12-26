@@ -8,6 +8,8 @@ import:
   #   mode: merge
   - source: notifications.yml
     mode: merge
+  - source: notifications_tw-gold.yml
+    mode: deep_merge
   - source: before.yml
     mode: merge
   # - source: install_with_bower.yml

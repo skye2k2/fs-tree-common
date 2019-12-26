@@ -29,6 +29,24 @@ import:
     mode: merge
 ```
 
-Then put anything additional you wish to have happen before running tests in an `install` section.
+Add which team's channel to notify about builds (note the deep merge). Example:
+
+```
+  - source: notifications_tw-gold.yml
+    mode: deep_merge
+```
+
+
+And then put anything additional you wish to have happen before running tests in an `install` section.
 
 If you need specific build script steps, simply add an entry for it, and it will override the default.
+
+### Updating
+
+If you need to update a Slack notification channel, run the following:
+
+```
+travis encrypt SLACK_ACCOUNT:SLACK_TOKEN#CHANNEL --add notifications.slack.rooms
+```
+
+and then move the resulting string that was placed in the root `.travis.yml` to its proper desitnation.

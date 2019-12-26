@@ -8,8 +8,4 @@ notifications:
       - '%{result}: %{repository} <%{build_url}|#%{build_number}>  (<%{compare_url}|%{commit}>)'
       - "\tin %{duration} for %{author}'s commit:"
       - "\t\"%{commit_subject}\""
-    rooms:
-      - '$SLACK_TOKEN#$SLACK_NOTIFICATION_CHANNEL'
     on_pull_requests: false
-    on_success: always
-    on_failure: change
