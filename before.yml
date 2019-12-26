@@ -1,0 +1,3 @@
+before_install:
+  # Create .netrc for access to install private repositories
+  - 'echo -e "machine github.com\n  login $GITHUB_AUTH_TOKEN" >> ~/.netrc'

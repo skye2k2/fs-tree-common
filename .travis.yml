@@ -1,0 +1,25 @@
+version: ~> 1.0
+
+# This Travis CI configuration makes use of imports to commonize and simplify build configuration. Utilizes shallow merge, allowing overwrites for all root level sections.
+import:
+  - source: base.yml
+    mode: merge
+  # - source: sauce.yml
+  #   mode: merge
+  - source: notifications.yml
+    mode: merge
+  - source: before.yml
+    mode: merge
+  # - source: install_with_bower.yml
+  #   mode: merge
+  - source: scripts.yml
+    mode: merge
+
+# Put anything additional you wish to have happen before running tests in the install section.
+install:
+
+# If you need specific build script steps, simply add an entry like those below, and it will override the default. For example, in this repository, we don't have access to fs-common-build-scripts, so we zero out all of the before and after steps.
+before_script:
+after_success:
+after_failure:
+after_script:

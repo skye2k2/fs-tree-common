@@ -1,0 +1,11 @@
+{
+  "name": "fs-common-build-scripts",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "scripts": {
+    "preinstall": "git config --global url.https://github.com/.insteadOf git://github.com/",
+    "lint:quiet": "echo 'No linting defined or run. You win by default!'",
+    "test:ci": "echo 'No tests defined or run. You win by default!'"
+  }
+}

@@ -1,0 +1,13 @@
+before_script:
+  - node node_modules/fs-common-build-scripts/bin/before_script.sh
+script:
+  # Run linting checks, suppressing warnings for cleanliness
+  - npm run lint:quiet
+  # Run tests
+  - npm run test:ci
+after_success:
+  - node node_modules/fs-common-build-scripts/bin/create_release.js
+after_failure:
+  - node_modules/fs-common-build-scripts/bin/report_failure_details.sh
+after_script:
+  - node_modules/fs-common-build-scripts/bin/after_script.sh
