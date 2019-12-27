@@ -9,3 +9,5 @@ notifications:
       - "\tin %{duration} for %{author}'s commit:"
       - "\t\"%{commit_subject}\""
     on_pull_requests: false
+    # rooms:
+    # - IMPORTANT: You need to add your own `rooms` entry in your local .travis.yml file, due to environment variables not being available to this hook, and encrypted values not being sharable across repositories.
