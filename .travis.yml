@@ -1,6 +1,6 @@
 version: ~> 1.0
 
-# This Travis CI configuration makes use of imports to commonize and simplify build configuration. Utilizes shallow merge, allowing overwrites for all root level sections.
+# This Travis CI configuration makes use of imports (https://docs.travis-ci.com/user/build-config-imports/) to commonize and simplify build configuration. Utilizes shallow merge, allowing overwrites for all root level sections, and deep merge for notifications.
 import:
   - source: base.yml
     mode: merge

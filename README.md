@@ -15,24 +15,24 @@ version: ~> 1.0
 
 # This Travis CI configuration makes use of imports to commonize and simplify build configuration. Utilizes shallow merge, allowing overwrites for all root level sections. See fs-webdev/fs-tree-common for more detail.
 import:
-  - source: fs-webdev/fs-tree-common/base.yml
+  - source: fs-webdev/fs-tree-common:base.yml
     mode: merge
-  - source: fs-webdev/fs-tree-common/sauce.yml
+  - source: fs-webdev/fs-tree-common:sauce.yml
     mode: merge
-  - source: fs-webdev/fs-tree-common/notifications.yml
+  - source: fs-webdev/fs-tree-common:notifications.yml
     mode: merge
-  - source: fs-webdev/fs-tree-common/before.yml
+  - source: fs-webdev/fs-tree-common:before.yml
     mode: merge
-  - source: fs-webdev/fs-tree-common/install_with_bower.yml
+  - source: fs-webdev/fs-tree-common:install_with_bower.yml
     mode: merge
-  - source: fs-webdev/fs-tree-common/scripts.yml
+  - source: fs-webdev/fs-tree-common:scripts.yml
     mode: merge
 ```
 
 Add which team's channel to notify about builds (note the deep merge). Example:
 
 ```
-  - source: notifications_tw-gold.yml
+  - source: fs-webdev/fs-tree-common:notifications_tw-gold.yml
     mode: deep_merge
 ```
 
