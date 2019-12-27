@@ -20,6 +20,11 @@ import:
 # Put anything additional you wish to have happen before running tests in the install section.
 install:
 
+notifications:
+  slack:
+    rooms:
+      # TODO: Add your Slack account:token#channel entry here
+
 # If you need specific build script steps, simply add an entry like those below, and it will override the default. For example, in this repository, we don't have access to fs-common-build-scripts, so we zero out all of the before and after steps.
 before_script:
 after_success:
