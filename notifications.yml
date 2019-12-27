@@ -1,7 +1,8 @@
 notifications:
   email:
-    on_success: never
-    on_failure: change
+    on_success: always
+    on_failure: always
+    recipients: cbergmann@familysearch.org
   slack:
     # Custom template used because SUCCESS/FAILURE is all the way at the end by default
     template:
