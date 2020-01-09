@@ -1,0 +1,22 @@
+{
+  "name": "fs-tree-common",
+  "version": "0.1.0",
+  "description": "This is only required because we want to make use of auto-releases, and fs-common-build-scripts currently requires bower",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "ignore": [
+    "**/.*",
+    "**/node_modules",
+    "**/bower_components",
+    "**/components",
+    "**/demo",
+    "**/test",
+    "gulpfile.js",
+    "package.json",
+    "src/",
+    "src/*",
+    "wct.*.json"
+  ]
+}

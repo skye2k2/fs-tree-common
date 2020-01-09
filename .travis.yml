@@ -2,31 +2,22 @@ version: ~> 1.0
 
 # This Travis CI configuration makes use of imports (https://docs.travis-ci.com/user/build-config-imports/) to commonize and simplify build configuration. Utilizes shallow merge, allowing overwrites for all root level sections, and deep merge for notifications.
 import:
-  - source: base.yml
+  - source: travis/base.yml
     mode: merge
-  # - source: sauce.yml
+  # - source: travis/sauce.yml
   #   mode: merge
-  - source: notifications.yml
+  - source: travis/notifications.yml
     mode: merge
-  - source: notifications_tw-gold.yml
-    mode: deep_merge
-  - source: before.yml
+  - source: travis/before.yml
     mode: merge
-  # - source: install_with_bower.yml
-  #   mode: merge
-  - source: scripts.yml
+  - source: travis/install_with_bower.yml
+    mode: merge
+  - source: travis/scripts.yml
     mode: merge
 
 # Put anything additional you wish to have happen before running tests in the install section.
-install:
+# install:
 
-notifications:
-  slack:
-    rooms:
-      # TODO: Add your Slack account:token#channel entry here
-
-# If you need specific build script steps, simply add an entry like those below, and it will override the default. For example, in this repository, we don't have access to fs-common-build-scripts, so we zero out all of the before and after steps.
+# If you need specific build script steps, simply add an entry like those below, and it will override the default. For example, this repository currently does not have production code, so we zero out the Code Climate-related `before` and `after` steps.
 before_script:
-after_success:
-after_failure:
 after_script:

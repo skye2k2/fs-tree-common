@@ -1,7 +1,10 @@
 {
-  "name": "fs-common-build-scripts",
-  "version": "0.0.0",
+  "name": "fs-tree-common",
+  "version": "0.1.0",
   "dependencies": {
+  },
+  "devDependencies": {
+    "fs-common-build-scripts": "github:fs-webdev/fs-common-build-scripts#semver:^2"
   },
   "scripts": {
     "preinstall": "git config --global url.https://github.com/.insteadOf git://github.com/",

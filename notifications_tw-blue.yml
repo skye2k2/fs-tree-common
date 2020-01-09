@@ -1,4 +1,0 @@
-notifications:
-  slack:
-    on_success: change
-    on_failure: change
